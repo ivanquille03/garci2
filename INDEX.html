@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sitio oficial del Colegio Emblemático Inca Garcilaso de la Vega. Especialidades técnicas en computación, carpintería, electrónica, mecánica y más.">
+    <meta name="keywords" content="colegio, técnico, educación, computación, carpintería, electrónica, mecanica">
+    <meta name="author" content="Colegio Inca Garcilaso de la Vega">
+    <title>Colegio Emblemático Inca Garcilaso de la Vega</title>
+    
+    <style>
+        /* Estilo general del cuerpo */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #d9eee9;
+            color: #1013d4;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        /* Animación de desvanecimiento */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Contenedor principal */
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #ffffff;
+            border-bottom: 8px solid rgb(5, 243, 223);
+        }
+
+        /* Estilo del título central */
+        .nav-links {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        /* Caja para imágenes */
+        .box {
+            width: 120px;
+            height: 120px;
+            border-radius: 15px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(30, 6, 248, 0.979);
+        }
+
+        .box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Estilos del encabezado */
+        header {
+            background-color: #5ad3d3;
+            color: #1511e4;
+            padding: 15px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 2px 10px rgba(13, 17, 221, 0.925);
+        }
+
+        header h1 {
+            margin: 5;
+            font-size: 1.8em;
+            font-weight: bold;
+        }
+
+        /* Estilos del menú de navegación */
+        nav {
+            margin-top: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin-right: 40px;
+            position: relative;
+        }
+
+        nav ul li a {
+            color: #0e0bda;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 5px 5px;
+            border-radius: 90px;
+            font-size: 1.5em;
+            transition: background-color 0.4s, color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #fff;
+            background-color: #0dd2e0;
+        }
+
+        /* Submenú desplegable */
+        nav ul li ul {
+            display: none;
+            position: absolute;
+            background-color: #13dfd4;
+            padding: 10px;
+            border-radius: 5px;
+            z-index: 1;
+            box-shadow: 0 2px 5px rgba(230, 6, 6, 0.2);
+        }
+
+        nav ul li:hover ul {
+            display: block;
+        }
+
+        /* Estilos para las áreas técnicas */
+        nav ul li ul li {
+            margin-bottom: 10px; /* Espacio entre las opciones del submenú */
+        }
+
+        nav ul li ul li a {
+            text-decoration: none; /* Quita el subrayado */
+            display: block; /* Asegura que los enlaces ocupen todo el ancho */
+            padding: 5px 0; /* Agrega espacio arriba y abajo */
+            font-size: 1.2em; /* Reduce el tamaño de fuente */
+        }
+
+        nav ul li ul li a:hover {
+            background-color: #0de0c4; /* Cambia el color de fondo al pasar el mouse */
+        }
+
+        /* Diseño responsivo para dispositivos móviles */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav ul li {
+                margin-bottom: 10px;
+            }
+
+            .container {
+                flex-direction: column;
+            }
+        }
+        
+        /* Estilos para la sección de héroe */
+        .hero {
+            background-image: url('colegio1.jfif'); /* Define la imagen de fondo */
+            background-size: cover; /* Ajusta la imagen para cubrir todo el div */
+            height: 800px; /* Define la altura del div */
+            display: flex; /* Activa la flexbox para el diseño */
+            align-items: center; /* Alinea los elementos verticalmente al centro */
+            justify-content: center; /* Alinea los elementos horizontalmente al centro */
+            color: white; /* Define el color del texto */
+            text-align: center; /* Alinea el texto al centro */
+        }
+
+        /* Estilos para el menú de platillos */
+        .menu {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .botones-platillos {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .botones-platillos button {
+            margin: 20px;
+            padding: 10px 20px;
+            background-color: #1736e4;
+            color: #ffffff;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 2em;
+            transition: background-color 0.3s;
+        }
+
+        .botones-platillos button:hover {
+            background-color: #0dd2e0;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <!-- Contenedor superior con el título y las imágenes -->
+    <div class="container">
+        <div class="box">
+            <img src="insignia.jpeg" alt="Escudo del colegio Inca Garcilaso de la Vega">
+        </div>
+        <div class="nav-links">
+            <h1>COLEGIO EMBLEMÁTICO INCA GARCILASO DE LA VEGA</h1>
+        </div>
+        <div class="box">
+            <img src="logos1.jfif" alt="Escudo del colegio Inca Garcilaso de la Vega">
+        </div>
+    </div>
+
+    <!-- Encabezado con el menú de navegación -->
+    <header>
+        <h1> PASIÓN POR EL TRABAJO TÉCNICO </h1>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li>
+                    <a href="#especialidades">Áreas Técnicas</a>
+                    <ul>
+                        <li><a href="file:///C:/Users/VIPER-BLACK/Desktop/TAREAS%202024/html/trabajos/proyec%20(1)/oooo/proyec%20(1)/Computaci%C3%B3n%20e%20Inform%C3%A1tica/Computaci%C3%B3n%20e%20Inform%C3%A1tica.html">Computación e Informática</a></li>
+                        <li><a href="https://www.ejemplo.com/personal">Carpintería</a></li>
+                        <li><a href="https://www.ejemplo.com/remuneraciones">Electrónica</a></li>
+                        <li><a href="https://www.ejemplo.com/contabilidad">Industrias Alimentarias</a></li>
+                        <li><a href="https://www.ejemplo.com/tesoreria">Electricidad</a></li>
+                        <li><a href="https://www.ejemplo.com/abastecimiento">Mecánica Automotriz</a></li>
+                        <li><a href="https://www.ejemplo.com/escalafon">Industrias del Vestido</a></li>
+                        <li><a href="https://www.ejemplo.com/informatica">Metalurgia</a></li>
+                    </ul>
+                </li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="file:///C:/Users/VIPER-BLACK/Desktop/TAREAS%202024/html/trabajos/proyec%20(1)/oooo/proyec%20(1)/mapa/mapa.html">Ubicación</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sección de héroe -->
+    <section class="hero">
+        <h2></h2>
+    </section>
+
+    <!-- Sección de menú de platillos -->
+    <section class="menu">
+        <h2 class="texto-platillos">NOMBRES...</h2>
+        <div class="botones-platillos">
+            <button class="todos btn btn-verde">DIRECCION</button>
+            <button class="ensaladas btn btn-verde">SUB DIRECCION</button>
+            <button class="pasta btn btn-verde">DOCENTES DEL AREA</button>
+            <button class="pizza btn btn-verde">ALUMNOS</button>
+        </div>
+    </section>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sitio oficial del Colegio Emblemático Inca Garcilaso de la Vega. Especialidades técnicas en computación, carpintería, electrónica, mecánica y más.">
+    <meta name="keywords" content="colegio, técnico, educación, computación, carpintería, electrónica, mecánica">
+    <meta name="author" content="Colegio Inca Garcilaso de la Vega">
+    <title>Colegio Emblemático Inca Garcilaso de la Vega</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <style>
+        /* Estilo general del cuerpo */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #10e6b4;
+            color: #1013d4;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        /* Animación de desvanecimiento */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Contenedor principal */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* Estilos para las áreas técnicas */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Columnas responsivas */
+    gap: 40px; /* Espacio entre elementos de la cuadrícula */
+    justify-items: center; /* Centrar elementos en la cuadrícula */
+    padding: 20px; /* Agrega un relleno interno al contenedor */
+    margin: 0 auto; /* Centra el contenedor en la página */
+    max-width: 1200px; /* Establece un ancho máximo para la cuadrícula */
+}
+
+/* Mejora la accesibilidad con enfoque en pantallas más pequeñas */
+@media (max-width: 600px) {
+    .grid {
+        grid-template-columns: repeat(auto-fill, minmax(100%, 1fr)); /* Columnas a ancho completo en pantallas pequeñas */
+        gap: 20px; /* Reduce el espacio en pantallas pequeñas */
+    }
+}
+
+/* Agrega un efecto de hover para los elementos dentro de la cuadrícula */
+.grid .curso {
+    transition: transform 0.3s; /* Suaviza la transformación al hacer hover */
+}
+
+.grid .curso:hover {
+    transform: scale(1.05); /* Efecto de zoom al pasar el ratón sobre los elementos */
+}
+
+
+
+/* Estilos para el contenedor principal */
+.container {
+    text-align: center; /* Centra el texto en el contenedor */
+    padding: 20px; /* Espacio interno alrededor del contenedor */
+}
+
+/* Estilo para el título */
+.titulo {
+    margin: 0 0 20px; /* Margen inferior para espacio entre el título y la cuadrícula */
+    font-size: 2em; /* Tamaño de fuente del título */
+    color: #333; /* Color del texto del título */
+    font-weight: bold; /* Negrita para resaltar el título */
+}
+
+/* Estilos para las áreas técnicas */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Columnas responsivas */
+    gap: 40px; /* Espacio entre elementos de la cuadrícula */
+    justify-items: center; /* Centrar elementos en la cuadrícula */
+    padding: 20px; /* Agrega un relleno interno al contenedor */
+    margin: 0 auto; /* Centra el contenedor en la página */
+    max-width: 1200px; /* Establece un ancho máximo para la cuadrícula */
+}
+
+/* Mejora la accesibilidad con enfoque en pantallas más pequeñas */
+@media (max-width: 600px) {
+    .grid {
+        grid-template-columns: repeat(auto-fill, minmax(100%, 1fr)); /* Columnas a ancho completo en pantallas pequeñas */
+        gap: 20px; /* Reduce el espacio en pantallas pequeñas */
+    }
+}
+
+
+        .curso {
+            border: 10px solid #071ff3;
+            border-radius: 8px;
+            padding: 16px;
+            text-align: center;
+            background-color: #13e7d6;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+
+        .curso:hover {
+            transform: scale(1.05); /* Efecto de escala al pasar el mouse */
+        }
+
+        .curso h3 {
+            font-size: 24px;
+            color: #000;
+        }
+
+        .curso-imagen {
+            width: 100%;
+            height: auto;
+            max-width: 300px;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+
+        .curso-descripcion {
+            font-size: 16px;
+            color: #101feb;
+            margin: 10px 0;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #131010;
+            background-color: #c2e913;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        .center img {
+            max-width: 90%;
+            max-height: 90%;
+        }
+
+        /* Estilos básicos para el pie de página */
+        footer {
+            background-color: #22ebeb;
+            padding: 20px 0;
+            text-align: center;
+            border-top: 2px solid #1515d8;
+        }
+
+        footer p {
+            color: #000;
+            text-transform: uppercase;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .social-icons {
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 24px;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            color: #1310e6;
+            background-color: #ccee0a;
+            display: inline-block;
+            text-align: center;
+            border-radius: 50%;
+            transition: background-color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            background-color: #ff002b;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <section id="especialidades">
+            <h2>Áreas Técnicas</h2>
+            <div class="grid">
+                <div class="curso">
+                    <h3>Computación Informática</h3>
+                    <img src="computo1.jfif"  class="curso-imagen">
+                    <p class="curso-descripcion">Explora las últimas tendencias y tecnologías en el campo de la computación. Aprende sobre programación, redes y mucho más.</p>
+                    <a href="file:///C:/Users/VIPER-BLACK/Desktop/TAREAS%202024/html/trabajos/proyec%20(1)/oooo/proyec%20(1)/Computaci%C3%B3n%20e%20Inform%C3%A1tica/Computaci%C3%B3n%20e%20Inform%C3%A1tica.html" class="btn">Ver Más Información</a>
+                </div>
+
+                <div class="curso">
+                    <h3>Carpintería</h3>
+                    <img src="carpinteria1.jfif"  class="curso-imagen">
+                    <p class="curso-descripcion">Aprende sobre diseño y construcción de muebles y estructuras de madera. Desarrolla habilidades prácticas y artísticas.</p>
+                    <a href="carpinteria/Carpinteria.html" class="btn">Ver Más Información</a>
+                </div>
+
+                <div class="curso">
+                    <h3>Electrónica</h3>
+                    <img src="electronica1.jfif"  class="curso-imagen">
+                    <p class="curso-descripcion">Descubre los principios de la electrónica y su aplicación en dispositivos modernos. Aprende sobre circuitos y componentes electrónicos.</p>
+                    <a href="Electrónica/Electrónica.html" class="btn">Ver Más Información</a>
+                </div>
+
+                <div class="curso">
+                    <h3>Industrias Alimentarias</h3>
+                    <img src="Industrias Alimentarias1.jfif"  class="curso-imagen">
+                    <p class="curso-descripcion">Conoce el proceso de producción y conservación de alimentos. Aprende sobre la calidad y seguridad alimentaria.</p>
+                    <a href="Industrias%20Alimentarias/Industrias%20Alimentarias.html" class="btn">Ver Más Información</a>
+                </div>
+
+                <div class="center">
+                    <img src="logos1.jfif" alt="Logo del Colegio">
+                </div>
+
+                <div class="curso">
+                    <h3>Electricidad</h3>
+                    <img src="electricidad1.jfif"  class="curso-imagen">
+                    <p class="curso-descripcion">Estudia los principios de la electricidad y su aplicación en sistemas eléctricos. Desarrolla habilidades técnicas para la instalación y mantenimiento.</p>
+                    <a href="Electricidad/Electricidad.html" class="btn">Ver Más Información</a>
+                </div>
+
+                <div class="curso">
+                    <h3>Mecánica Automotriz</h3>
+                    <img src="mecanica1.jfif"  class="curso-imagen">
+                    <p class="curso-descripcion">Aprende sobre el funcionamiento y reparación de vehículos. Desarrolla habilidades en mecánica y diagnóstico de problemas automotrices.</p>
+                    <a href="Mecánica%20Automotriz/Mecánica%20Automotriz.html" class="btn">Ver Más Información</a>
+                </div>
+
+                <div class="curso">
+                    <h3>Industrias del Vestido</h3>
+                    <img src="Industrias del Vestido1.jfif"  class="curso-imagen">
+                    <p class="curso-descripcion">Descubre el proceso de diseño y producción de prendas de vestir. Aprende sobre moda y confección.</p>
+                    <a href="Industrias%20del%20Vestido/Industrias%20del%20Vestido.html" class="btn">Ver Más Información</a>
+                </div>
+
+                <div class="curso">
+                    <h3>Metalurgia</h3>
+                    <img src="metalurgica1.jfif" class="curso-imagen">
+                    <p class="curso-descripcion">Conoce los procesos de transformación de metales y sus aplicaciones industriales. Aprende sobre propiedades y tratamientos de metales.</p>
+                    <a href="Metalurgia/Metalurgia.html" class="btn">Ver Más Información</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <body>
+    
+        <footer>
+            <div class="container">
+                <p>&copy; 2024 Colegio Inca Garcilaso de la Vega. Todos los derechos reservados.</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://ugelcusco.gob.pe/ws/" target="_blank" aria-label="Ugel Cusco">
+                        <i class="fas fa-school"></i>
+                    </a>
+                    <a href="https://www.youtube.com" target="_blank" aria-label="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://www.tiktok.com" target="_blank" aria-label="TikTok">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                </div>
+            </div>
+        </footer>
+    
+    </body>
+    </html>

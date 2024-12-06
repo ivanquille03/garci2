@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIRECCIÓN</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Alinear al inicio (parte superior) */
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            animation: backgroundFade 3s ease-in-out;
+            padding-top: 50px; /* Espacio en la parte superior */
+        }
+        
+        @keyframes backgroundFade {
+            0% { background-color: #f4f4f4; }
+            100% { background-color: #e1f5fe; }
+        }
+
+        .pergamino {
+            background: linear-gradient(100deg, #0c08ec, #0acae4);
+            border: px solid #1c0de4;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            max-width: 600px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .pergamino:hover {
+            transform: scale(1.02);
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin: 0;
+            color: #b3da0a;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="pergamino">
+        <h1>DIRECCION DEL COLEGIO</h1>
+    </div>
+</body>
+</html>
